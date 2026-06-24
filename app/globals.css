@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Subtle gradient backdrop that evokes sky/weather */
+body {
+  background:
+    radial-gradient(1200px 600px at 80% -10%, rgba(14, 165, 233, 0.12), transparent 60%),
+    radial-gradient(900px 500px at -10% 10%, rgba(249, 115, 22, 0.08), transparent 55%),
+    #f0f9ff;
+}
+
+/* Reusable card surface */
+.card {
+  @apply rounded-2xl bg-white shadow-card ring-1 ring-slate-900/5;
+}
+
+.chip {
+  @apply inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-medium;
+}
